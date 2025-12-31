@@ -1,10 +1,17 @@
 <html>
-    <title>Time Table</title>
-    <body>
-      <h2><center><u>::View Class Timetable::</u></center></h2>
-      <hr>
-        <h5><center>Select from the following optionsto see timtable for the respective class</center></h5>
-        <center><td align="right">Academic Year
+<title>Time Table</title>
+
+<body>
+    <h2>
+        <center><u>::View Class Timetable::</u><input type="button" value="print"></center>
+
+    </h2>
+    <hr>
+    <h5>
+        <center>Select from the following optionsto see timtable for the respective class</center>
+    </h5>
+    <center>
+        <td align="right">Academic Year
             <select name="year">
                 <option value="2021-2022">2021-2022</option>
                 <option value="2022-2023">2022-2023</option>
@@ -51,79 +58,146 @@
                 <option value="L">L</option>
             </select>
         </td>
-        <button>Show Me</button></center>
-        <center><table border="1">
-        <tr>
-            <td>Day\Hour</td>
-            <td>9:00-10:00</td>
-            <td>10:00-11:00</td>
-            <td>11:00-12:00</td>
-            <td>12:00-1:00</td>
-            <td>1:00-2:00</td>
-            <td>2:00-3:00</td>
-            <td>3:00-4:00</td>
-        </tr>
-        <tr>
-            <td><center>MON</center></td>
-            <td><center>DBMS</center></td>
-            <td><center>SE</center></td>
-            <td><center>PS</center></td>
-            <td><center>L</center></td>
-            <td><center>OS</center></td>
-            <td><center>BE</center></td>
-            <td><center>SE</center></td>
-        </tr>
-         <tr>
-            <td><center>TUE</center></td>
-            <td><center>PS</center></td>
-            <td><center>DBMS</center></td>
-            <td><center>BE</center></td>
-            <td><center>U</center></td>
-            <td><center>FD</center></td>
-            <td><center>OS</center></td>
-            <td><center>SE</center></td>
-        </tr>
-         <tr>
-            <td><center>WED</center></td>
-            <td><center>DBMS</center></td>
-            <td><center>FD</center></td>
-            <td><center>PS</center></td>
-            <td><center>N</center></td>
-            <td><center>FD</center></td>
-            <td><center>BE</center></td>
-            <td><center>OS</center></td>
-        </tr>
-         <tr>
-            <td><center>THU</center></td>
-            <td><center>BE</center></td>
-            <td><center>DBMS</center></td>
-            <td><center>PS</center></td>
-            <td><center>C</center></td>
-            <td><center>SE</center></td>
-            <td><center>OS</center></td>
-            <td><center>PS</center></td>
-        </tr>
-         <tr>
-            <td><center>FRI</center></td>
-            <td><center>DBMS</center></td>
-            <td><center>DTI</center></td>
-            <td><center>BE</center></td>
-            <td><center>H</center></td>
-            <td><center>OS</center></td>
-            <td><center>FD</center></td>
-            <td><center>SE</center></td>
-        </tr>
-         <tr>
-            <td><center>SAT</center></td>
-            <td><center>BE</center></td>
-            <td><center>PS</center></td>
-            <td><center>DBMS</center></td>
-            <td><center>BREAK</center></td>
-            <td><center>SE</center></td>
-            <td><center>OS</center></td>
-            <td><center>CNSL</center></td>
-        </tr>
+        <button>Show Me</button>
+    </center>
+    <center>
+        <table border="1">
+            <tr>
+                <td>Day\Hour</td>
+                <td>9:00-10:00</td>
+                <td>10:00-11:00</td>
+                <td>11:00-12:00</td>
+                <td>12:00-1:00</td>
+                <td>1:00-2:00</td>
+                <td>2:00-3:00</td>
+                <td>3:00-4:00</td>
+            </tr>
+            <tr>
+                <td>
+                    <center>Mon</center>
+                </td>
+                <td colspan="3">
+                    <center>FULL STACK DEVELOPMENT LAB</center>
+                </td>
+                <td>
+                    <center>L</center>
+                </td>
+                <td colspan="3">
+                    <center>FULL STACK DEVELOPMENT</center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>Tue</center>
+                </td>
+                <td colspan="3">
+                    <center>FULL STACK DEVELOPMENT</center>
+                </td>
+                <td>
+                    <center>U</center>
+                </td>
+                <td colspan="3">
+                    <center>DBMS LAB</center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>Wed</center>
+                </td>
+                <td>
+                    <center>PS</center>
+                </td>
+                <td>
+                    <center>BE</center>
+                </td>
+                <td>
+                    <center>DBMS</center>
+                </td>
+                <td>
+                    <center>N</center>
+                </td>
+                <td>
+                    <center>OS</center>
+                </td>
+                <td>
+                    <center>SE</center>
+                </td>
+                <td>
+                    <center>DBMS</center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>Thu</center>
+                </td>
+                <td>
+                    <center>DBMS</center>
+                </td>
+                <td>
+                    <center>SE</center>
+                </td>
+                <td>
+                    <center>PS</center>
+                </td>
+                <td>
+                    <center>C</center>
+                </td>
+                <td colspan="3">
+                    <center>OS LAB</center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>Fri</center>
+                </td>
+                <td colspan="3">
+                    <center>DTI LAB</center>
+                </td>
+                <td>
+                    <center>H</center>
+                </td>
+                <td>
+                    <center>PS</center>
+                </td>
+                <td>
+                    <center>OS</center>
+                </td>
+                <td>
+                    <center>BE</center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <center>Sat</center>
+                </td>
+                <td>
+                    <center>BE</center>
+                </td>
+                <td>
+                    <center>PS</center>
+                </td>
+                <td>
+                    <center>DBMS</center>
+                </td>
+                <td>
+                    <center>BREAK</center>
+                </td>
+                <td>
+                    <center>SE</center>
+                </td>
+                <td>
+                    <center>OS</center>
+                </td>
+                <td>
+                    <center>CNSL</center>
+                </td>
+            </tr>
         </table>
-        </center>
-    </body>
+    </center>
+    <hr>
+    <h6>
+        <center>Best viewed in 1024*768 resolution.</center>
+    </h6>
+</body>
+
 </html>
