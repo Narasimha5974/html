@@ -1,6 +1,40 @@
 <html>
-    <title>TABLE</title>
+    <head>
+        <title>TABLE</title>
+        <style>
+            body{
+                background-color: rgb(188, 246, 102);
+            }
+                h1{
+                    text-align: center;
+                    color: rgb(67, 0, 253);
+                }
+                table{
+                    margin: auto;
+                    background-color: aliceblue;
+                    border: solid black;
+                }
+                button{
+                    
+                    border-radius: 5px;
+                    background-color: black;
+                    color: rgb(140, 241, 248);
+                    margin: auto;
+                    display: block;
+                    margin-top: 10px;
+                    cursor: pointer;
+                }
+                button:hover{
+                    background-color: rgb(121, 119, 119);
+                    transition: 0.2s;
+                }
+                table,tr,td{
+                    text-align: center;
+                }
+        </style>
+    </head>
     <body>
+        <h1>Student Details</h1>
         <table border="1">
             <tr>
                 <td><b>Name</b></td>
@@ -14,35 +48,37 @@
                 <td>21</td>
                 <td>CSE</td>
                 <td>G</td>
-                <td>10</td>
+                <td style="background-color: rgb(199, 253, 165);">10</td>
             </tr>
             <tr>
                 <td>Rishi Preetham</td>
                 <td>22</td>
                 <td>CSE</td>
                 <td>G</td>
-                <td>10</td>
+                <td style="background-color: rgb(196, 253, 165);">10</td>
             </tr>
             <tr>
                 <td>Sandeep</td>
                 <td>23</td>
                 <td>CSE</td>
                 <td>G</td>
-                <td>9</td>
+                <td style="background-color: rgb(253, 215, 165);">9</td>
             </tr>
             <tr>
                 <td>Dhanush</td>
                 <td>24</td>
                 <td>CSE</td>
                 <td>G</td>
-                <td>9</td>
+                <td style="background-color:  rgb(253, 215, 165);">9</td>
             </tr>
             <tr>
                 <td>Bhanu Raju</td>
                 <td>25</td>
                 <td>CSE</td>
                 <td>G</td>
-                <td>8</td>
+                <td style="background-color: rgb(255, 130, 130);">8</td>
             </tr>
+        </table>    
+    <button>Submit</button>
     </body>
 </html>
