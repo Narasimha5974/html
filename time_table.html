@@ -1,10 +1,77 @@
 <html>
-<title>Time Table</title>
-
+    <head>
+        <title>Time Table</title>
+        <style>
+            body{
+            background-color: rgb(255, 255, 255);
+            }
+        .h2{
+            font-family: "Times New Roman";
+            font-size: 24px;
+            color: #EAE30C;
+            background-color: blueviolet;
+            margin-bottom: none;
+            margin-top: none;
+            padding-bottom: none;
+            border-radius: 5px;
+        }
+        .button{
+            background-color: #FFF0F5;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .button:hover{
+            background-color: #e296e2;
+            transition-duration: 0.5s;
+        }
+        .show{
+            background-color: blueviolet;
+            color: #FFF0F5;
+            padding: 7px 18px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        .show:hover{
+            background-color: rgb(174, 94, 248);
+            transition-duration: 0.5s;
+        }
+        year select, sem select, branch select, section select{
+            padding: 5px;
+            margin: 5px;
+            border-radius: 4px;
+            border: 1px solid #000000;
+        }
+        td{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 0px;
+            border: 2px solid #ccc;
+        }
+        .footer{
+            background-color: rgb(208, 182, 233);
+            color: #FFF0F5;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 98%;
+            border-radius: 10px;
+        }
+        </style>
+    </head>
 <body>
-    <h2>
-        <center><u>::View Class Timetable::</u><input type="button" value="print"></center>
-
+    <h2 class="h2">
+        <center><u>::View Class Timetable::</u></center>
+        <center><input type="button" value="print" class="button"></center>
     </h2>
     <hr>
     <h5>
@@ -20,7 +87,7 @@
                 <option value="2025-2026">2025-2026</option>
             </select>
         </td>
-        <td align="right">Semester
+        <td  align="right">Semester
             <select name="sem">
                 <option value="First Year-First Semester">First Year-First Semester</option>
                 <option value="First Year-Second Semester">First Year-Second Semester</option>
@@ -58,10 +125,10 @@
                 <option value="L">L</option>
             </select>
         </td>
-        <button>Show Me</button>
+        <button class="show" onclick="showTable()">Show Me</button>
     </center>
     <center>
-        <table border="1">
+        <table border="1" id="Gsection">
             <tr>
                 <td>Day\Hour</td>
                 <td>9:00-10:00</td>
@@ -198,6 +265,6 @@
     <h6>
         <center>Best viewed in 1024*768 resolution.</center>
     </h6>
+    <footer class="footer"><center>&copy;2025 All Rights Reserved</center></footer>
 </body>
-
 </html>
