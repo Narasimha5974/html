@@ -1,0 +1,178 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #000000;
+            color: #fff;
+            border-radius: 5px;
+        }
+        #head {
+            color: #fff;
+            font-size: 15px;
+            margin-left: 20px;
+        }
+        input {
+            width: 500px;
+            height: 40px;
+            border-radius: 5px;
+            border: 2px solid #535252;
+            padding: 10px;
+            margin-right: 20px;
+        }
+        button {
+            background-color: #535252;
+            color: #fff;
+            border: 2px solid white;
+            border-color: white;
+            border-radius: 5px;
+        }
+        #submit {
+            background-color: #535252;
+            color: #fff;
+            border: 2px solid white;
+            border-color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-left: 1350px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        #submit:hover {
+            background-color: #99999a;
+            color: white;
+            transition: 0.5s;
+        }
+        #signin {
+            background-color: #4C5FD5;
+            color: #fff;
+            border: 2px solid white;
+            border-color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-right: 30px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        #signin:hover {
+            background-color: #9ea8ec;
+            color: #fff;
+            transition: 0.5s;
+        }
+        
+        .main {
+            font-family: Century Schoolbook;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 0px;
+            padding-top: 20px;
+            padding-bottom: 100px;
+        }
+        input[type="text"] {
+            border-radius: 50px;
+        }
+        #search{
+            padding: 15px 15px;
+            width: 100px;
+            margin-top: 20px;
+            color: black;
+            background-color: #fff;
+            border: 2px solid white;
+            border-color: white;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+        #search:hover {
+            background-color: #000000;
+            color: white;
+            transition: 0.6s
+        }
+        .manage, .authenticate, .support {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            width: 300px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px solid black;
+            padding-bottom: 20px;
+            border-radius: 5px;
+            align-items: grid;
+        }
+        .sections {
+            display: flex;        
+            row-gap: 10px;            
+        }
+
+        .manage, .authenticate, .support {
+            flex: 1;              
+            padding: 15px;
+            margin: 50px;
+            background: rgb(255, 255, 255);
+        }
+        .main {
+            background-image: url('https://images6.alphacoders.com/685/thumb-1920-685698.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .manage, .authenticate, .support {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50px;
+        }
+        .manage:hover, .authenticate:hover, .support:hover {
+            background-color: rgb(249, 238, 217);
+            color: rgb(0, 0, 0);
+            transition: 0.5s;
+        }
+        #learn{
+            text-decoration: none;
+            color: rgb(152, 142, 244);
+        }
+        #learn:hover{
+            color: rgb(43, 0, 255);
+            transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h4 id="head">Emblem Empire | Help Center</h4>
+            <button id="submit">Submit a request</button>
+            <button id="signin">Sign in</button>
+        </nav>
+    </header>
+    <div class="main">
+        <h1>How can we help?</h1>
+        <input type="text" placeholder="Search">
+        <button id="search">Search</button>
+
+    <div class="sections">
+    <div class="manage">
+        <h2>Manage you account</h2>
+        <p>Manage your account settings, such as your email address and password.</p>
+        <a href="#" id="learn">Learn more →</a>
+    </div>
+    <div class="authenticate">
+        <h2>Authentication</h2>
+        <p>An authentication problem occurs when this verification process fails or is disrupted.</p>
+        <a href="#" id="learn">Learn more →</a>
+    </div>
+    <div class="support">
+        <h2>Support</h2>
+        <p>Get in touch with a human.</p>
+        <a href="#" id="learn">Learn more →</a>
+    </div>
+    </div>
+</body>
+</html>
