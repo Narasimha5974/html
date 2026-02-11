@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon Clone</title>
+
+    <link rel="shortcut icon"
+          href="https://img.freepik.com/premium-vector/ecommerce-logo-design_624194-151.jpg?w=2000"
+          type="image/x-icon">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            animation: fadeIn 2s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        html, body {
+            overflow-x: hidden;  
+        }
+
+        /* HEADER */
+        .header {
+            background-color: black;
+            color: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            gap: 15px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            white-space: nowrap;
+        }
+
+        /* Categories */
+        .categories select {
+            height: 38px;
+            width: 180px;
+            margin-left: 50px;
+            border-radius: 5px;
+        }
+        .categories select:hover{
+            color: black;
+            background-color: rgb(243, 236, 236);
+            transition: 0.5s;
+        }
+        /* Search box */
+        .search-box {
+            display: flex;
+            flex: 1;
+            max-width: 500px;
+            margin-left: 5px;
+        }
+        .search-box input {
+            flex: 1;
+            height: 35px;
+            padding-left: 10px;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+        }
+        .search-box input:hover{
+            color: black;
+            background-color: rgb(243, 236, 236);
+            transition: 0.5s;
+        }
+        .search-box button {
+            height: 37px;
+            padding: 0 20px;
+            margin-left: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: orange;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .search-box button:hover{
+            color: black;
+            background-color: rgb(230, 184, 100);
+            transition: 0.5s;
+        }
+
+        /* Cart */
+        .cart {
+            margin-left: 10px;
+            margin-right: 20px;
+        }
+
+        .cart a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .cart a:hover {
+            color: orange;
+        }
+        .signin , .signup{
+            height: 36px;
+            width: 70px;
+            background-color: orange;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            margin: 2px;
+        }
+        .forgot{
+            height: 36px;
+            width: 100px;
+            background-color: orange;
+            color: black;
+            border: none;
+            border-radius: 10px;
+            margin: 2px;
+        }
+        .signin:hover , .signup:hover , .forgot:hover{
+            color: black;
+            background-color: rgb(230, 184, 100);
+            transition: 0.5s;
+        }
+        /* NAVBAR */
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 38px;
+            padding: 10px 20px;
+            background-color: #f2f2f2;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .options a:hover {
+            color: orange;
+            transition: 0.3s;
+        }
+        .slider {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides {
+            display: flex;
+            width: 400vw; /* 4 slides × 100vw */
+            height: 100%;
+            animation: slide 20s infinite;
+        }
+
+        .slides img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        /* Animation */
+        @keyframes slide {
+            0%   { transform: translateX(0); }
+            20%  { transform: translateX(0); }
+
+            25%  { transform: translateX(-100vw); }
+            45%  { transform: translateX(-100vw); }
+
+            50%  { transform: translateX(-200vw); }
+            70%  { transform: translateX(-200vw); }
+
+            75%  { transform: translateX(-300vw); }
+            95%  { transform: translateX(-300vw); }
+
+            100% { transform: translateX(0); }
+        }
+        .card {
+            max-width: 800px;
+            margin: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .card-footer {
+            margin-top: 15px;
+            text-align: center;
+        }
+        /* Responsive */
+        @media(max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        p{
+            text-align: center;
+            color: white;
+            background-color: black;
+            padding: 7px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <h2>Amazon Clone</h2>
+        </div>
+
+        <div class="categories">
+            <select>
+                <option>All Categories</option>
+                <option>Alexa Skills</option>
+                <option>Amazon Devices</option>
+                <option>Amazon Fashion</option>
+                <option>Amazon Fresh</option>
+                <option>Amazon Pharmacy</option>
+                <option>Appliances</option>
+                <option>Apps & Games</option>
+                <option>Audible Audiobooks</option>
+                <option>Baby</option>
+                <option>Beauty</option>
+                <option>Books</option>
+                <option>Car & Motorbike</option>
+                <option>Clothing & Accessories</option>
+                <option>Collectibles</option>
+                <option>Computers & Accessories</option>
+                <option>Deals</option>
+                <option>Electronics</option>
+                <option>Furniture</option>
+                <option>Garden & Outdoors</option>
+                <option>Gift Cards</option>
+                <option>Grocery</option>
+                <option>Home & Kitchen</option>
+                <option>Industrial & Scientific</option>
+                <option>Jewellery</option>
+                <option>Luggage & Bags</option>
+                <option>Movies & TV Shows</option>
+                <option>Prime Video</option>
+            </select>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search products">
+            <button>Search</button>
+        </div>
+
+        <div class="cart">
+            <a href="#">🛒 Cart</a>
+        </div>
+        <a href="Ecommerce_signin.html"><button class="signin">Sign In</button></a>
+        <a href="Ecommerce_signup.html"><button class="signup">Sign Up</button></a>
+        <a href="Ecommerce_forgot.html"><button class="forgot">Forgot Password</button></a>
+    </div>
+
+    <!-- NAVBAR -->
+    <div class="options">
+        <a href="#">All</a>
+        <a href="#">New Releases</a>
+        <a href="#">Today's Deals</a>
+        <a href="#">Gift Cards</a>
+        <a href="#">Amazon Basics</a>
+        <a href="#">Customer Service</a>
+        <a href="#">Fashion</a>
+        <a href="#">Electronics</a>
+        <a href="#">Home & Kitchen</a>
+        <a href="#">Sports</a>
+        <a href="#">Prime</a>
+        <a href="#">Help</a>
+    </div>
+<div class="slider">
+    <div class="slides">
+        <img src="https://assets.aboutamazon.com/dims4/default/f2fd3b3/2147483647/strip/true/crop/1280x687+0+16/resize/1440x773!/format/webp/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2F24%2Fb8%2Ff8733dc64728923aaa2df8a9f41c%2Flive-now-banner.jpg">
+        <img src="https://cdn0.desidime.com/SEO/1200-by-675-seo-image-amazon-sale-ends-final-days.png">
+        <img src="https://static.digit.in/default/6cb05191fc45117ee858f173cd1f79cb4e8228a4.jpeg">
+        <img src="https://www.theshoppingfriendly.com/wp-content/uploads/2024/09/Amazon-Great-Indian-Festival.webp">
+    </div>
+</div>
+<div class="card">
+        <h2>Bulk order discounts + Up to 18% GST savings</h2>
+
+        <div class="grid">
+            <div class="grid-item">
+                <img src="https://media.istockphoto.com/id/1059536108/photo/groceries.jpg?s=612x612&w=0&k=20&c=4BL-n2mKMOpSo4_wUprkDqbP4eXkXh_CbrQMy-KKXQ8=" alt="Grocery">
+                <div class="label">up to 5% off | Grocery</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw1/KitchenAppliances_372_232._SY232_CB777666522_.jpg" alt="Kitchen Appliances">
+                <div class="label">Up to 60% off | Kitchen appliances</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://img.freepik.com/premium-photo/different-tablets-pills-foil-blister-packs-medications-drugs-blue-background_123211-653.jpg?w=2000" alt="Medicines">
+                <div class="label">Up to 60% off | Medicines</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw1/Laptops_372_232._SY232_CB777666522_.jpg" alt="Laptops">
+                <div class="label">Up to 45% off | Laptops</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://images-eu.ssl-images-amazon.com/images/G/31/AmazonBusiness/img25/nov/bau/ain/gw1/OfficeChairs_372_232._SY232_CB777666522_.jpg" alt="Office Furniture">
+                <div class="label">Min. 50% off | Office furniture</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://t4.ftcdn.net/jpg/03/64/41/07/360_F_364410722_To5BhNoslW4QLWZ3KtkVFMckiFO0TFxn.jpg" alt="Accessories">
+                <div class="label">up to 10% off | Accessories</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://tse1.mm.bing.net/th/id/OIP.ZBearhOoMN4WgAUcDjBg_gHaEK?w=1920&h=1080&rs=1&pid=ImgDetMain&o=7&rm=3" alt="mobile phones">
+                <div class="label">up to 25% off | Mobiles</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://m-cdn.phonearena.com/images/article/137958-wide-two_1200/Amazon-has-just-leaked-Samsungs-Galaxy-Tab-S8-family-in-full-yes-really.jpg" alt="Tablets">
+                <div class="label">up to 30% off | Tablets</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://cdnp0.stackassets.com/43303c427d39aee285ebb741c38495e54471b481/store/44dc9e35dec9895d85e13c1cc8463eb9dfc273041d414ba6b8dfee2af0cc/image_processing20211015-72-1dsne4h.jpg" alt="TV">
+                <div class="label">up to 30% off | TV's</div>
+            </div>
+            <div class="grid-item">
+                <img src="https://rushguides.com/wp-content/uploads/2023/09/Ingress-SEP.jpg" alt="fashion">
+                <div class="label">up to 25% off | Fashion</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 Amazon Clone • Designed by LAKSHMI NARASIMHULU MANCHI</p>
+    </footer>
+</body>
+</html>
